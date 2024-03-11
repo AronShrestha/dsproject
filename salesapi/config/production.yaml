@@ -1,0 +1,16 @@
+app_id: com.ds.api
+app_name: ds_project_salesapi
+app_uri: https://1520adae872b.ngrok.app
+pg_dsn: postgresql://postgres:postgres@localhost:5432/ds?sslmode=require
+
+redis_settings: redis://localhost/0
+pg_use_ssl: false
+broadcaster_dsn: redis://localhost/broadcaster
+secret_key: CfZ1gZi1QPD69ZCyrlrOUwRjGNQVydZ76ubvkhG6o97=
+
+debug: True
+domain_host: 'local'
+
+# bulksms estimation 
+bulksms_estimation_cost_multiplier: 1.5
+bulksms_refund_time: 10

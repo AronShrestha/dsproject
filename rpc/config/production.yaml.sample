@@ -1,0 +1,71 @@
+app_id: com.krispcall.api
+app_name: krispcall
+app_uri: http://localhost
+
+pg_dsn: postgresql://postgres:postgres@db:5432/salesdb
+redis_settings: redis://redis/0
+redis_settings: redis://redis/broadcaster
+pg_use_ssl: false
+
+secret_key: CfZ1gZi1QPD69ZCyrlrOUwRjGNQVydZ76ubvkhG6o97=
+
+
+intercom_secret_key: JP_SSR6OahAGmheP-IHReSKGwt41WukEhx0H_gzm
+
+jwt_secret_private_pem: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIIEpAIBAAKCAQEA0WLLG8osYyWsCcDAMRyV+nEfj5Ski7uRi8LEIWYCAMqni/od
+    idkorb7EZBmbN3k8JmDGZJ0UD8b864jgtcFGlJ7whLzn3H4T8xKpKo9U/SnGSbTO
+    0guuikt/2zhnKRghNOEmID8EIlYVhn3PGqntnM1m79Ey5eECfjG1jFZ35Q/EYQ4e
+    0lOZgWPIOkvknGk9Z3RBiF1Mgc5M17dra4dkKNBsHouM6NEyrV5w2NZBBgLNGhGN
+    BWaXofFQCCDAe/dUh2EqzvOJBfmgwcICMgp1opc6VRCSmcEzsRWdNTf4p6dOFbbF
+    wNtKebnOoGu0CR11WQvC5i0pOAAtV5RU/PzfUQIDAQABAoIBAQCd932qOo3gQxSW
+    yw90Pc+8gMnBxe+Z5+l3WnojhFTwifN7fDf6vpWc9vYtWtAqOtGxVoN2drci7An2
+    HG8DUIxSJdLpIad/RrMASEzN6hLBaFnLU5hRCTUl6q3MErJpY2XyAgaEf2Y8DVvx
+    +kpcIGU+Tgxh0x8mJOp/kDsaZEXRzgTw0exhhB7ucpIoT7wbP/H9fkNM/7EwDZ+d
+    ksPDb/+AOxpODHptcxw0CqlPVFFkmyHWX7SklLNcnOYXtMak+2fT5afHi5zFqx1D
+    x/+G7d+Kxs6RLOuUDKJwqH2CMMlbr6t+ADokchhQDYAZuhOVim0pjT9t32zNKpXU
+    Eu1pJkwdAoGBAO21PTsx0jGMVFrYE0b92w/zON6IoKgKna0c824DuZcgnER9F6XA
+    mKQpZSJSNDUeIWWwS13jS6z7Wn5NgqnDfFJ6dixvbVueBYqX9Z/PKx7PbLkHo/pw
+    4z9hkbK6wAEzQ/BN3pyL47EyYk5zQOHi7EcxzRs44VFYdpv3aOplh0h7AoGBAOF/
+    nri6Ra81pN9oOlJ5zHwIjOuy3nzrd0+zy2HAx0RZuSFgEKD8AYUPb3L/XjhoiGG/
+    BZcC8wM09AjXnPvtaWJZOrCuV4euwO5zdblR4JBXILOzujl/DGKems47Cl9+E1A0
+    21A86eewTf+06Nm4j1PbdkyzBgYgpQppLhXmYlujAoGARm4+2D0oxFmJ3OjMvWoV
+    8CHmpbjhsSiEE3jSf7RG1wpogrp1uTzZfTpupr6ojVyCFLkpe4YPNA+9flLE9jvf
+    qCh0vzG8uzqU9b2Un2copZZb5m7nHRs5mdv06Xn/zds8tAS+gq/IJQaCri/j94ne
+    7DFLTleKGyoU6p1hzqGKdeUCgYEApi7RID5WoJseGG7NnH6ajkYW5JT7loBJe3l7
+    R100/VBKOSh82Mcfr5oCfnNoUpXm/HI0gmfwA8sAlYug66C5a3tq3058v0ewc4qv
+    lZWbs4QiW4z2juzsibltSNMF//3/6boqbmWV0+OAeBQxDlMPfbNc6YV9yQJB3vxI
+    tGcG0ZUCgYBO6GEnO097FYbkOX/Hu9dipE7J/GhUqtHKCV64aoXTfohcIV0WKWLI
+    HAdLszgCXrA4Sts4hwHMquB3lG3mg8hC9a5xl0KkzuZRbze44yqNEKBw2qd+HXK+
+    VXPN7nb2VSFwdgp3BnaPehwGglUUISSej9lRGf+pldDfOfWS8B8Lig==
+    -----END RSA PRIVATE KEY-----
+
+jwt_secret_public_pem: |
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0WLLG8osYyWsCcDAMRyV
+    +nEfj5Ski7uRi8LEIWYCAMqni/odidkorb7EZBmbN3k8JmDGZJ0UD8b864jgtcFG
+    lJ7whLzn3H4T8xKpKo9U/SnGSbTO0guuikt/2zhnKRghNOEmID8EIlYVhn3PGqnt
+    nM1m79Ey5eECfjG1jFZ35Q/EYQ4e0lOZgWPIOkvknGk9Z3RBiF1Mgc5M17dra4dk
+    KNBsHouM6NEyrV5w2NZBBgLNGhGNBWaXofFQCCDAe/dUh2EqzvOJBfmgwcICMgp1
+    opc6VRCSmcEzsRWdNTf4p6dOFbbFwNtKebnOoGu0CR11WQvC5i0pOAAtV5RU/Pzf
+    UQIDAQAB
+    -----END PUBLIC KEY-----
+
+
+
+var_path: var/
+log_dir: var/logs/
+docs_path: ../docs/
+
+
+debug: True
+
+twilio_account_sid: xxxxx
+twilio_auth_token: xxxx
+test_twilio_account_sid: xxxx
+test_twilio_auth_token: xxxx
+
+twilio_api_key: xxxx
+twilio_api_secret: xxxx
+twilio_outgoing_application_sid: xxxx

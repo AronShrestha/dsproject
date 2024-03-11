@@ -1,0 +1,412 @@
+[2024-01-05 14:11:51,170] ERROR:uvicorn.error (on@134) Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_base.py", line 74, in _listener
+    event = await self._backend.next_published()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_backends/redis.py", line 35, in next_published
+    message = await self._subscriber.next_published()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncio_redis/protocol.py", line 2995, in next_published
+    return await self._messages_queue.get()
+  File "/usr/lib/python3.9/asyncio/queues.py", line 166, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 714, in lifespan
+    await receive()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 587, in __aexit__
+    await self._router.shutdown()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 692, in shutdown
+    await handler()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_base.py", line 67, in disconnect
+    self._listener_task.result()
+asyncio.exceptions.CancelledError
+
+[2024-01-15 06:11:43,536] ERROR:uvicorn.error (on@134) Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_base.py", line 74, in _listener
+    event = await self._backend.next_published()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_backends/redis.py", line 35, in next_published
+    message = await self._subscriber.next_published()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncio_redis/protocol.py", line 2995, in next_published
+    return await self._messages_queue.get()
+  File "/usr/lib/python3.9/asyncio/queues.py", line 166, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 714, in lifespan
+    await receive()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 587, in __aexit__
+    await self._router.shutdown()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 692, in shutdown
+    await handler()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_base.py", line 67, in disconnect
+    self._listener_task.result()
+asyncio.exceptions.CancelledError
+
+[2024-01-15 06:11:50,325] ERROR:uvicorn.error (on@121) Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 705, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 584, in __aenter__
+    await self._router.startup()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 682, in startup
+    await handler()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/databases/core.py", line 84, in connect
+    await self._backend.connect()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/databases/backends/postgres.py", line 70, in connect
+    self._pool = await asyncpg.create_pool(**kwargs)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncpg/pool.py", line 409, in _async__init__
+    await self._initialize()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncpg/pool.py", line 437, in _initialize
+    await first_ch.connect()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncpg/pool.py", line 129, in connect
+    self._con = await self._pool._get_new_connection()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncpg/pool.py", line 514, in _get_new_connection
+    con = await connection.connect(
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncpg/connection.py", line 2114, in connect
+    return await connect_utils._connect(
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 982, in _connect
+    conn = await _connect_addr(
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 803, in _connect_addr
+    return await __connect_addr(params, timeout, False, *args)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 866, in __connect_addr
+    await compat.wait_for(connected, timeout=timeout)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncpg/compat.py", line 60, in wait_for
+    return await asyncio.wait_for(fut, timeout)
+  File "/usr/lib/python3.9/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+asyncpg.exceptions.InvalidCatalogNameError: database "sales_db" does not exist
+
+[2024-01-15 06:11:50,325] ERROR:uvicorn.error (on@57) Application startup failed. Exiting.
+[2024-01-19 05:48:31,657] ERROR:uvicorn.error (on@134) Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_base.py", line 74, in _listener
+    event = await self._backend.next_published()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_backends/redis.py", line 35, in next_published
+    message = await self._subscriber.next_published()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncio_redis/protocol.py", line 2995, in next_published
+    return await self._messages_queue.get()
+  File "/usr/lib/python3.9/asyncio/queues.py", line 166, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 714, in lifespan
+    await receive()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 587, in __aexit__
+    await self._router.shutdown()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 692, in shutdown
+    await handler()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_base.py", line 67, in disconnect
+    self._listener_task.result()
+asyncio.exceptions.CancelledError
+
+[2024-02-01 07:55:40,602] ERROR:uvicorn.error (on@134) Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_base.py", line 74, in _listener
+    event = await self._backend.next_published()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_backends/redis.py", line 35, in next_published
+    message = await self._subscriber.next_published()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/asyncio_redis/protocol.py", line 2995, in next_published
+    return await self._messages_queue.get()
+  File "/usr/lib/python3.9/asyncio/queues.py", line 166, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 714, in lifespan
+    await receive()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 587, in __aexit__
+    await self._router.shutdown()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/routing.py", line 692, in shutdown
+    await handler()
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/broadcaster/_base.py", line 67, in disconnect
+    self._listener_task.result()
+asyncio.exceptions.CancelledError
+
+[2024-02-09 10:38:54,301] ERROR:uvicorn.error (h11_impl@413) Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 26, in _convert_excgroups
+  |     yield
+  |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 208, in __call__
+  |     response_sent.set()
+  |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 664, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    |     return await self.app(scope, receive, send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/applications.py", line 116, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 208, in __call__
+    |     response_sent.set()
+    |   File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 31, in _convert_excgroups
+    |     raise exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 206, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |   File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 98, in dispatch
+    |     response = await call_next(request)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 180, in call_next
+    |     raise app_exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 166, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/sessions.py", line 80, in __call__
+    |     await self.app(scope, receive, send_wrapper)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 38, in __call__
+    |     response = self.on_error(conn, exc)
+    |   File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 39, in on_authentication_error
+    |     raise exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 36, in __call__
+    |     auth_result = await self.backend.authenticate(conn)
+    |   File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 57, in authenticate
+    |     raise AuthenticationError(str(e))
+    | starlette.authentication.AuthenticationError: not enough values to unpack (expected 2, got 1)
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/applications.py", line 116, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 208, in __call__
+    response_sent.set()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 31, in _convert_excgroups
+    raise exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 206, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 98, in dispatch
+    response = await call_next(request)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 180, in call_next
+    raise app_exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 166, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/sessions.py", line 80, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 38, in __call__
+    response = self.on_error(conn, exc)
+  File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 39, in on_authentication_error
+    raise exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 36, in __call__
+    auth_result = await self.backend.authenticate(conn)
+  File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 57, in authenticate
+    raise AuthenticationError(str(e))
+starlette.authentication.AuthenticationError: not enough values to unpack (expected 2, got 1)
+[2024-02-09 10:38:54,304] ERROR:uvicorn.error (h11_impl@413) Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 26, in _convert_excgroups
+  |     yield
+  |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 208, in __call__
+  |     response_sent.set()
+  |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 664, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    |     return await self.app(scope, receive, send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/applications.py", line 116, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 208, in __call__
+    |     response_sent.set()
+    |   File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 31, in _convert_excgroups
+    |     raise exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 206, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |   File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 98, in dispatch
+    |     response = await call_next(request)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 180, in call_next
+    |     raise app_exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 166, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/sessions.py", line 80, in __call__
+    |     await self.app(scope, receive, send_wrapper)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 38, in __call__
+    |     response = self.on_error(conn, exc)
+    |   File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 39, in on_authentication_error
+    |     raise exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 36, in __call__
+    |     auth_result = await self.backend.authenticate(conn)
+    |   File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 57, in authenticate
+    |     raise AuthenticationError(str(e))
+    | starlette.authentication.AuthenticationError: not enough values to unpack (expected 2, got 1)
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/applications.py", line 116, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 208, in __call__
+    response_sent.set()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 31, in _convert_excgroups
+    raise exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 206, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 98, in dispatch
+    response = await call_next(request)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 180, in call_next
+    raise app_exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 166, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/sessions.py", line 80, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 38, in __call__
+    response = self.on_error(conn, exc)
+  File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 39, in on_authentication_error
+    raise exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 36, in __call__
+    auth_result = await self.backend.authenticate(conn)
+  File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 57, in authenticate
+    raise AuthenticationError(str(e))
+starlette.authentication.AuthenticationError: not enough values to unpack (expected 2, got 1)
+[2024-02-19 08:17:17,574] ERROR:uvicorn.error (h11_impl@413) Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 26, in _convert_excgroups
+  |     yield
+  |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 208, in __call__
+  |     response_sent.set()
+  |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 664, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    |     return await self.app(scope, receive, send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/applications.py", line 116, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 208, in __call__
+    |     response_sent.set()
+    |   File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 31, in _convert_excgroups
+    |     raise exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 206, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |   File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 98, in dispatch
+    |     response = await call_next(request)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 180, in call_next
+    |     raise app_exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 166, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/sessions.py", line 80, in __call__
+    |     await self.app(scope, receive, send_wrapper)
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 38, in __call__
+    |     response = self.on_error(conn, exc)
+    |   File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 39, in on_authentication_error
+    |     raise exc
+    |   File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 36, in __call__
+    |     auth_result = await self.backend.authenticate(conn)
+    |   File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 57, in authenticate
+    |     raise AuthenticationError(str(e))
+    | starlette.authentication.AuthenticationError: not enough values to unpack (expected 2, got 1)
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/applications.py", line 116, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 208, in __call__
+    response_sent.set()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 31, in _convert_excgroups
+    raise exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 206, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 98, in dispatch
+    response = await call_next(request)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 180, in call_next
+    raise app_exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/base.py", line 166, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/sessions.py", line 80, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 38, in __call__
+    response = self.on_error(conn, exc)
+  File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 39, in on_authentication_error
+    raise exc
+  File "/home/pc/.cache/pypoetry/virtualenvs/kpbackend-Xt2EoQj5-py3.9/lib/python3.9/site-packages/starlette/middleware/authentication.py", line 36, in __call__
+    auth_result = await self.backend.authenticate(conn)
+  File "/home/pc/Desktop/codavatar/krispcall-backend/krispcall_common/krispcall/common/core/middlewares.py", line 57, in authenticate
+    raise AuthenticationError(str(e))
+starlette.authentication.AuthenticationError: not enough values to unpack (expected 2, got 1)

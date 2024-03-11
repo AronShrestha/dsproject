@@ -1,0 +1,10 @@
+app_id: com.krispcall.api
+app_name: krispcall
+pg_dsn: postgresql://postgres:postgres@localhost:5432/ds?sslmode=require
+
+
+# redis_settings: redis://localhost/0
+redis_settings: redis://localhost/0
+pg_use_ssl: false
+
+broadcaster_dsn: redis://localhost/broadcaster

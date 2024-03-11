@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "salesapi"
+version = "0.1.0"
+description = "Sales dialer webapi"
+authors = ["parz3val <iamtheparzival@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fire = "^0.3.1"
+aioredis = "1.3.1"
+uvloop = "^0.14.0"
+pytest = "^6.2.4"
+httpx = "^0.23.2"
+coverage = "^6.5.0"
+krispcall-common = "^0.5.0"
+krispcall-components = "^0.5.25"
+krispcall-twilio="^0.1.0"
+krispcall-stripe="^0.0.5"
+
+
+[tool.black]
+line-length = 79
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
